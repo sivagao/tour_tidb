@@ -9,22 +9,22 @@ function unimplemented1(_1, callback) {
 function unimplemented2(_1, _2, callback) {
   unimplemented(callback)
 }
-fs.stat = unimplemented1
-fs.lstat = unimplemented1
-fs.unlink = unimplemented1
-fs.rmdir = unimplemented1
-fs.mkdir = unimplemented2
 function bootstrapGo() {
-  const go = new Go()
+  const go = new Go();
   fetch('main.css')
     .then(progressHandler)
     .then(r => r.arrayBuffer())
     .then(buffer => WebAssembly.instantiate(buffer, go.importObject))
     .then(result => {
-      go.run(result.instance)
-      document.getElementById('loading').style.display = 'none'
-      bootstrapTerm()
-    })
+      fs.stat = unimplemented1;
+      fs.lstat = unimplemented1;
+      fs.unlink = unimplemented1;
+      fs.rmdir = unimplemented1;
+      fs.mkdir = unimplemented2;
+      go.run(result.instance);
+      document.getElementById('loading').style.display = 'none';
+      bootstrapTerm();
+    });
 }
 function bootstrapTerm() {
   window.term = $('<div class="term">')
@@ -34,9 +34,9 @@ function bootstrapTerm() {
     continuedPromptLabel: ' -> ',
     commandValidate: function(line) {
       if (line == '') {
-        return false
+        return false;
       } else {
-        return true
+        return true;
       }
     },
     commandHandle: function(line, report) {
