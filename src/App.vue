@@ -55,16 +55,16 @@ import MdFile from "./components/MdFile.vue";
 export default {
   name: "app",
   mounted() {
-    [
-      "https://code.jquery.com/jquery-2.1.1.min.js",
-      "./jquery.console.js",
-      "./wasm_exec.js",
-      "./load.js"
-    ].forEach(i => {
-      let script = document.createElement("script");
-      script.setAttribute("src", i);
-      document.head.appendChild(script);
-    });
+    // [
+    //   "./jquery-2.1.1.min.js",
+    //   "./jquery.console.js",
+    //   "./wasm_exec.js",
+    //   "./load.js"
+    // ].forEach(i => {
+    //   let script = document.createElement("script");
+    //   script.setAttribute("src", i);
+    //   document.head.appendChild(script);
+    // });
   },
   components: { MdFile }
 };
@@ -75,6 +75,7 @@ body {
   /* background-color: #000000; */
   margin: 0;
 }
+
 .x-term-ctx {
   top: 0;
   bottom: 0;
