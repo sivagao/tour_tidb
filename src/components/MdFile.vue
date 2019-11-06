@@ -29,7 +29,7 @@ export default {
           $(copy).insertBefore(element);
         }
 
-        var $codes = document.querySelectorAll("pre code");
+        var $codes = document.querySelectorAll("pre code.language-sql");
 
         for (let i = 0; i < $codes.length; i++) {
           addCopy($codes[i]);
