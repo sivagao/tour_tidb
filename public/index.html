@@ -9,6 +9,19 @@
     <script type="text/javascript" src="jquery.console.js"></script>
     <script src="wasm_exec.js"></script>
     <script src="load.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151748922-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151748922-1', {
+        'linker': {
+          'domains': ['tour.pingcap.com/', 'play.tidb.io/', 'tour.tidb.io/']
+        }
+      });
+    </script>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>A Tour of TiDB</title>
 </head>
