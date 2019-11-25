@@ -1,7 +1,6 @@
 <template>
   <section class="section">
     <div class="xcontainer">
-      <h1 class="title">TiDB Playground</h1>
 
       <div class="xcontainer">
         <!-- <div class="notification">
@@ -11,6 +10,7 @@
         <!-- main section -->
         <div class="columns">
           <div class="column is-half">
+            <h1 class="title">TiDB Playground</h1>
             <md-file
               src="explore-sql.md"
               class="markdown-body"
@@ -76,12 +76,15 @@ body {
   margin: 0;
 }
 
-.x-term-ctx {
-  top: 0;
-  bottom: 0;
-  position: fixed;
-  right: 0;
+@media only screen and (min-width: 769px) {
+  .x-term-ctx {
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+  }
 }
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -190,6 +193,34 @@ div.term span.jquery-console-prompt-label {
 
   100% {
     width: 100%;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  body {
+    /* background-color: #f09a9d; Red */
+  }
+  .columns {
+    flex-direction: column !important;
+  }
+  .column.is-half {
+    width: 100%;
+    max-height: 48vh !important;
+    overflow: auto;
+  }
+  .loading-wrap,
+  div.term div.jquery-console-inner {
+    max-height: 48vh;
+  }
+  .section {
+    padding: 0.5rem;
+  }
+  .loading-wrap {
+    min-height: 40vh;
+  }
+  div.term div.jquery-console-message-success {
+    white-space: pre-wrap;
   }
 }
 </style>
