@@ -13,7 +13,7 @@
     "clipboard": "^2.0.4",
     "core-js": "^3.3.2",
     "github-markdown-css": "^3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vue": "^2.6.10",
     "vue-markdown": "^2.2.4"
   },
