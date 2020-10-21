@@ -128,8 +128,8 @@ div.term div.jquery-console-message-error {
 
 div.term div.jquery-console-message-success {
   color: #09f753;
-  font-family: monospace;
-  padding: 0.1em;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  padding: .1em;
   white-space: pre;
 }
 
